@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Style/styleHomebanking.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="shortcut icon" href="./Assets/Img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/13a3dab689.js" crossorigin="anonymous"></script>
+    <title>Account</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <!--<img src="logo.png" alt="">-->
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">IRONBANK <img src="/favicon.png" id="logoBank" alt="logoBank"></span>
+                        <span class="profession">Homebanking</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/accounts.html">
+                                <i class='bx bx-wallet icon'></i>
+                                <span class="text nav-text">Tus Cuentas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/cards.html">
+                                <i class='bx bxs-credit-card icon'></i>
+                                <span class="text nav-text">Tus Tarjetas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/transfers.html">
+
+                                <i class='bx bx-transfer icon'></i>
+                                <span class="text nav-text">Transacciones</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/loan-aplication.html">
+                                <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                                <span class="text nav-text">Prestamos</span>
+                            </a>
+                        </li>
+
+                        <hr class="featurette-divider">
+                        <div class="bottom-content">
+                            <li class="">
+                                <a href="#">
+                                    <i class='bx bx-log-out icon' @Click="logout()"></i>
+                                    <span class="text nav-text" @Click="logout()">Logout</span>
+                                </a>
+                            </li>
+
+                            <li class="mode">
+                                <div class="sun-moon">
+                                    <i class='bx bx-moon icon moon'></i>
+                                    <i class='bx bx-sun icon sun'></i>
+                                </div>
+                                <span class="mode-text text">Dark mode</span>
+
+                                <div class="toggle-switch">
+                                    <span class="switch"></span>
+                                </div>
+                            </li>
+
+                        </div>
+                    </ul>
+                </div>
+
+        </nav>
+
+        <section class="home">
+            <div class="text">
+                <h1>Cuenta {{nameAccount}}</h1>
+            </div>
+            <div class="hamburgerMenu">
+                <div class="hamburger">
+                    <div class="_layer -top"></div>
+                    <div class="_layer -mid"></div>
+                    <div class="_layer -bottom"></div>
+                </div>
+                <nav class="menuppal">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:8080/web/accounts.html">
+
+                                <span class="text nav-text"> <i class='bx bx-wallet icon'></i>Tus Cuentas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/cards.html">
+
+                                <span class="text nav-text"><i class='bx bxs-credit-card icon'></i>Tus Tarjetas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/transfers.html">
+
+
+                                <span class="text nav-text"><i class='bx bx-transfer icon'></i>Transacciones</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/loan-aplication.html">
+
+                                <span class="text nav-text"><i class="fa-solid fa-file-invoice-dollar icon"></i>Tus
+                                    Prestamos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                                <span class="text nav-text" @Click="logout()"><i class='bx bx-log-out icon'
+                                        @Click="logout()"></i>Logout</span>
+                            </a>
+                        </li>
+                        <li class="mode">
+
+
+
+                            <div class="toggle-switchH">
+                                <span class="mode-text1 text">Dark mode</span>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-content">
+
+                <main>
+
+                    <!--Tabla-->
+                    <div class="recent-grid">
+                        <div class="projects">
+                            <div class="card-transaccion">
+                                <div class="card-header">
+                                    <h3 class="titleCard"> Transacciones</h3>
+
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <td>Tipo</td>
+                                                    <td>Monto</td>
+                                                    <td>Descripcion</td>
+                                                    <td>Fecha</td>
+                                                    <td>Monto Cuenta</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr v-for="detail in accountTransactions">
+                                                    <td
+                                                        :style="{'color': (detail.type== 'DEBITO'? '#ff0000':'#008000')}">
+                                                        {{detail.type}}</td>
+                                                    <td>{{numberFinal(detail.amount)}}</td>
+                                                    <td>{{detail.description}}</td>
+                                                    <td>{{detail.date.substring(2,10)}}</td>
+                                                    <td>{{numberFinal(detail.currentAmount)}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <input type="button" value="Back to Main Menu" onclick="window.history.back()"
+                                    class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./Assets/Js/account.js"></script>
+</body>
+
+</html>

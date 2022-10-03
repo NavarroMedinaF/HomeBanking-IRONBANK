@@ -1,0 +1,653 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+.titleHomeh1{
+  align-self: self-end;
+}
+
+/*NAVBAR*/
+nav{
+    width: 100%;
+    height: 5.5rem;
+    
+}
+
+#logoBank{
+   font-size: 600;
+   margin-left: 1rem;
+}
+
+.dropdownNav{
+background-color: #198754;
+align-items: center;
+}
+
+.banner-principal{
+    background-image: url(../Img/banner-principal-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.banner-principal-contenedor{
+    width: 50%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-principal-titulo{
+    width: 42%;
+    height: 60%;
+    
+}
+
+.banner-principal-titulo h2{
+    font-size: 4rem;
+    padding-bottom: 2.5rem;
+}
+.banner-principal-titulo a{
+    height: 3.5rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4rem;
+    
+}
+
+.banner-principal-texto{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.boton-B-online{
+    color: white;
+    background-color: #044618;
+    padding: 5px 11px;
+    border-style: solid;
+    border-width: 5px;
+    
+}
+
+.boton-B-online:hover {
+    border-bottom: 5px solid #044618 ;
+    border-top: 5px solid #044618;
+    border-left: 5px solid #044618;
+    border-right: 5px solid #044618;
+   font-weight: 700;
+    
+  }
+  
+
+ .link1 {
+  box-shadow: inset 0 0 0 0 #044618;
+  color: #044618;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.link1:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #044618;;
+}
+
+.link1 {
+  color: #044618;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+/*FOOTER*/
+.linkMindhub{
+    color: #fe0fff !important;
+}
+
+footer a:hover{
+background-color: #044618;
+border-radius: 5px;
+padding: 5px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.logofooter{
+  height: 1rem;
+  width: 1rem;
+}
+
+/*MAIN*/
+.contenedor-info{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+}
+.contenedor-info h2{
+    padding-bottom:2rem;
+}
+.imghome{
+    height: 20rem;
+    width: 32.5rem;
+
+}
+
+.imgcard{
+    height: 17.7rem;
+    width: 100%;
+}
+
+
+/*BANNER*/
+.banner{
+    padding: 10vh;
+    background-color: rgb(1, 101, 1);
+}
+
+.cardbanner{
+margin-top: 1rem;
+height: 36rem;
+
+}
+.cardbanner a{
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+
+}
+.cardbanner img{
+    width: 100%;
+    height: 27vh;
+}
+
+/*INFO CEDITCARDS*/
+.contenedor-todo{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    padding-right: 6.8rem;
+}
+
+.contenedor-infocard{
+    margin: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+.contenedor-desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 15px;
+    background-color: #c4f4d3;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.titulo-desc{
+    align-self: center;
+    padding-right: 1rem;
+}
+.tarjeta-desc{
+    width: 170px;
+    height: 100px;
+    
+}
+
+.logos-card-view1{
+height: 19px;
+width: 60px;
+margin-left: -1rem;
+
+}
+.logos-card-view2{
+    height: 40px;
+    width: 60px;
+    margin-left: -1rem;
+}
+
+ ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left:1rem;
+}
+
+li p{
+    padding-left: 1rem;
+}
+
+.p-padding{
+    padding-left: 1.55rem;
+}
+
+/*EMPREDEDORES CARD*/
+
+.card-emprendedor {
+padding-top: 1rem;
+height: 35rem;
+}
+.card-emprendedor p a{
+margin: auto;
+}
+.hola{
+    height: 9vh;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-emprendedor{
+    display: none;
+}
+
+/*MODAL*/
+
+  ::selection{
+    background: #fa4299;
+    color: #fff;
+  }
+  .wrapper{
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  }
+  .wrapper .title-text{
+    display: flex;
+    width: 200%;
+  }
+  .wrapper .title{
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  .wrapper .slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+  }
+  .slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+  }
+  .slide-controls label.signup{
+    color: #000;
+  }
+
+  .slide-controls .slider-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, #044618, #008000); 
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  #signup:checked ~ .slider-tab{
+    left: 50%;
+  }
+  #signup:checked ~ label.signup{
+    color: #fff;
+    cursor: default;
+    user-select: none;
+  }
+  #signup:checked ~ label.login{
+    color: #000;
+  }
+  #login:checked ~ label.signup{
+    color: #000;
+  }
+  #login:checked ~ label.login{
+    cursor: default;
+    user-select: none;
+  }
+  .wrapper .form-container{
+    width: 100%;
+    overflow: hidden;
+  }
+  .form-container .form-inner{
+    display: flex;
+    width: 200%;
+  }
+  .form-container .form-inner form{
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  .form-inner form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .form-inner form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+  .form-inner form .field input:focus{
+    border-color: #fc83bb;
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+  }
+  .form-inner form .field input::placeholder{
+    color: #999;
+    transition: all 0.3s ease;
+  }
+  form .field input:focus::placeholder{
+    color: #b3b3b3;
+  }
+  .form-inner form .pass-link{
+    margin-top: 5px;
+  }
+  .form-inner form .signup-link{
+    text-align: center;
+    margin-top: 30px;
+  }
+  .form-inner form .pass-link a,
+  .form-inner form .signup-link a{
+    color: #008000; 
+    text-decoration: none;
+  }
+  .form-inner form .pass-link a:hover,
+  .form-inner form .signup-link a:hover{
+    text-decoration: underline;
+  }
+  .btn{
+    --bs-btn-border-width: 0px !important;
+  }
+  form .btn{
+    height: 50px;
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  form .btn .btn-layer{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #044618, #008000,#044618, #008000);
+    border-radius: 5px;
+    transition: all 0.4s ease;;
+  }
+  
+  form .btn input[type="submit"]{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    padding-left: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .modal-fondo{
+    background-image: url(../Img/login\ home.webp);
+    background-size: 75rem;
+    border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+    border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+    width: 60rem;
+    height: 50rem;
+  } 
+  .modal-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/*MEDIA QUERYS*/
+@media (max-width: 1440px) {
+    .cardbanner{
+        height: 42rem;
+    }
+   
+  
+    .banner-principal-titulo h2{
+      font-size: 3rem;
+    }
+
+    .titleNav{
+      width: 30%;
+    }
+    .imghome {
+      height: 15rem;
+      width: 21.5rem;
+  }
+  h3{
+    font-size: 1.5rem;
+  }
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 29.666667%;
+}
+}
+
+@media (max-width: 1024px) {
+  
+  #logoBank{
+    font-size: 2rem;
+    
+  }
+    .contenedor-todo  {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      /* padding-right: 0.8rem; */
+    }
+    .tarjeta-desc{
+        width: 150px;
+    height: 80px;
+    }
+    
+    .cardbanner{
+        height: 42rem;
+    }
+    .imghome{
+        height: 15rem;
+        width: 23.5rem;
+    
+    }
+    .banner-principal-titulo{
+      width: 60%;
+    }
+    .banner-principal-titulo h2{
+      font-size: 3rem;
+    } 
+
+    .titleNav{
+      width: 23%;
+    }
+    .order-md-2 {
+      order: 0!important;
+   }
+   .col-lg-3 {
+    width: 33%!important;
+}
+/* .banner {
+  padding: 4vh;
+  height: 48rem;
+} */
+  }
+
+  @media (max-width: 768px) {
+    .contenedor-todo{
+        flex-direction: column;
+        align-content: space-around;
+    }
+    .contenedor-infocard{
+        width: 350px;
+
+    }
+    .contenedor-desc  {
+      flex-wrap: wrap;
+    }
+    
+    .tarjeta-desc{
+        width: 150px;
+    height: 80px;
+    }
+    .cardbanner{
+        height: 30rem;
+        width: 33rem;
+    }
+    .imghome{
+        height: 14rem;
+        width: 17rem;
+    
+    }
+    .titleNav{
+      width: 80%;
+      justify-content:  center;
+    }
+    .titleNav h1{
+      font-size: 3rem;
+    }
+    #logoBank{
+      font-size: 3rem;
+    }
+    .boton-B-online{
+      margin: 1rem;
+    }
+    .dropdownNav li a{
+      color: black;
+    }
+    .banner-principal-contenedor {
+      width:  60%;
+    }
+    .banner-principal-titulo h2{
+      font-size: 3rem;
+    }
+    
+/* .banner {
+    padding: 55vh;
+    height: 48rem;
+} */
+.containerInfo{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+.col-lg-3 {
+  width: 85%!important;
+}
+  }
+  @media (max-width: 425px) {
+    .contenedor-infocard{
+        width: 350px;
+        margin-left: 6rem;
+    }
+    ul li  {
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+    
+    .tarjeta-desc{
+        width: 150px;
+    height: 80px;
+    }
+    .cardbanner{
+        height: auto;
+        width: auto;
+    }
+    .banner-principal-contenedor {
+      width:  100%;
+    }
+    .banner-principal-titulo h2{
+      font-size: 3rem;
+    }
+    .footerIcons{
+      width: 100%;
+    }
+    .titleFooter{
+      font-size: 2rem;
+    }
+    .col-lg-3 {
+      width: 100%!important;
+    }
+  }
+
+  @media (max-width: 375px){
+    .banner-principal-titulo h2{
+      font-size: 2.5rem;
+    }
+    .titleNav h1{
+      font-size: 2.5rem;
+    }
+    #logoBank{
+      font-size: 2.5rem;
+    }
+  }
+  @media ( max-width: 320px){
+    .contenedor-infocard{
+        width: 320px;
+        margin-left: 7rem;
+    }
+    .banner-contenedor{
+        margin-left: -2rem;   
+      
+    }
+    .cardbanner{
+        width: 13rem;
+    }
+    .imgcard{
+        height: 12rem;
+        width: 16rem;
+    }
+    .banner-principal-titulo h2{
+      font-size: 2rem;
+    }
+    .titleNav h1{
+      font-size: 2rem;
+    }
+    #logoBank{
+      font-size: 2rem;
+    }
+  }

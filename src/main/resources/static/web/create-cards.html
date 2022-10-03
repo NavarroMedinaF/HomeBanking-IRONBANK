@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Style/styleHomebanking.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="shortcut icon" href="./Assets/Img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/13a3dab689.js" crossorigin="anonymous"></script>
+    <title>Create-Cards</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <!--<img src="logo.png" alt="">-->
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">IRONBANK <img src="/favicon.png" id="logoBank" alt="logoBank"></span>
+                        <span class="profession">Homebanking</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+
+
+
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/accounts.html">
+                                <i class='bx bx-wallet icon'></i>
+                                <span class="text nav-text">Tus Cuentas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/cards.html">
+                                <i class='bx bxs-credit-card icon'></i>
+                                <span class="text nav-text">Tus Tarjetas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/transfers.html">
+                                <i class='bx bx-transfer icon'></i>
+                                <span class="text nav-text">Transacciones</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/loan-aplication.html">
+                                <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                                <span class="text nav-text">Prestamos</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bxs-user icon'></i>
+                                <span class="text nav-text">Datos Personales</span>
+                            </a>
+                        </li>
+
+
+
+
+                        <hr class="featurette-divider">
+                        <div class="bottom-content">
+                            <li class="">
+                                <a href="#">
+                                    <i class='bx bx-log-out icon' @Click="logout()"></i>
+                                    <span class="text nav-text" @Click="logout()">Logout</span>
+                                </a>
+                            </li>
+
+                            <li class="mode">
+                                <div class="sun-moon">
+                                    <i class='bx bx-moon icon moon'></i>
+                                    <i class='bx bx-sun icon sun'></i>
+                                </div>
+                                <span class="mode-text text">Dark mode</span>
+
+                                <div class="toggle-switch">
+                                    <span class="switch"></span>
+                                </div>
+                            </li>
+
+                        </div>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <section class="home">
+            <div class="text">
+                <h1>Solicitud de tarjeta</h1>
+            </div>
+            <div class="hamburgerMenu">
+                <div class="hamburger">
+                    <div class="_layer -top"></div>
+                    <div class="_layer -mid"></div>
+                    <div class="_layer -bottom"></div>
+                </div>
+                <nav class="menuppal">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:8080/web/accounts.html">
+
+                                <span class="text nav-text"> <i class='bx bx-wallet icon'></i>Tus Cuentas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/cards.html">
+
+                                <span class="text nav-text"><i class='bx bxs-credit-card icon'></i>Tus Tarjetas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/transfers.html">
+
+
+                                <span class="text nav-text"><i class='bx bx-transfer icon'></i>Transacciones</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/loan-aplication.html">
+
+                                <span class="text nav-text"><i class="fa-solid fa-file-invoice-dollar icon"></i>Tus
+                                    Prestamos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                                <span class="text nav-text" @Click="logout()"><i class='bx bx-log-out icon'
+                                        @Click="logout()"></i>Logout</span>
+                            </a>
+                        </li>
+                        <li class="mode">
+
+
+
+                            <div class="toggle-switchH">
+                                <span class="mode-text1 text">Dark mode</span>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-content">
+
+
+                <main>
+
+                    <div class="container-new-credit-card">
+                        <div class="img-form-newcredit-card">
+                            <img src="./Assets/Img/Facu_cardsFinal" class="imgCreateCard" alt="cards">
+                            <div class="textCreateCard">
+                                <p><i class="fa-solid fa-check"></i> Rapido y facil</p>
+                                <p><i class="fa-solid fa-check"></i> En solo 1 minuto</p>
+                                <p><i class="fa-solid fa-check"></i> 100% online</p>
+                            </div>
+                        </div>
+
+                        <div class="containertransfer containertransferCard">
+                            <form>
+                                <div class="row">
+                                    <h3 class="h4">Tipo de Tarjeta</h3>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="inlineRadioOptions1" type="radio"
+                                            value="CREDITO" id="defaultCheck1" v-model="type">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Credito
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="inlineRadioOptions1" type="radio"
+                                            value="DEBITO" id="defaultCheck2" v-model="type">
+                                        <label class="form-check-label" for="defaultCheck2">
+                                            Debito
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <div class="row">
+                                    <h3 class="h4">Color de Tarjeta</h3>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="inlineRadioOptions" type="radio"
+                                            value="GOLD" id="defaultCheck3" v-model="color">
+                                        <label class="form-check-label" for="defaultCheck3">
+                                            GOLD
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="inlineRadioOptions" type="radio"
+                                            value="SILVER" id="defaultCheck4" v-model="color">
+                                        <label class="form-check-label" for="defaultCheck4">
+                                            SILVER
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="inlineRadioOptions" type="radio"
+                                            value="TITANIUM" id="defaultCheck5" v-model="color">
+                                        <label class="form-check-label" for="defaultCheck5">
+                                            TITANIUM
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="button" class="buttontranfer" @Click="createCard()">Solicitar
+                                    Tarjeta</button>
+
+                                <hr>
+                                <div class="row">
+                                    <h4>Termino y Condiciones</h4>
+                                    <div class="input-group">
+                                        <input id="terms" type="checkbox" />
+                                        <label for="terms" class="textTerms">I accept the terms and conditions for
+                                            signing up to this
+                                            service, and hereby confirm I have read the privacy policy.</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+        </section>
+
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./Assets/Js/create-cards.js"></script>
+</body>
+
+</html>

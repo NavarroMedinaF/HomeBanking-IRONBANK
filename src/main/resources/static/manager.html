@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./web/Assets/Style/styleHomebanking.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="shortcut icon" href="./Assets/Img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/13a3dab689.js" crossorigin="anonymous"></script>
+    <title>Manager</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <!--<img src="logo.png" alt="">-->
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">IRONBANK <img src="/favicon.png" id="logoBank" alt="logoBank"></span>
+                        <span class="profession">Homebanking</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+
+
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/accounts.html">
+                                <i class='bx bx-wallet icon'></i>
+                                <span class="text nav-text">Tus Cuentas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/cards.html">
+                                <i class='bx bxs-credit-card icon'></i>
+                                <span class="text nav-text">Tus Tarjetas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/transfers.html">
+
+                                <i class='bx bx-transfer icon'></i>
+                                <span class="text nav-text">Transacciones</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="http://localhost:8080/web/loan-aplication.html">
+                                <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                                <span class="text nav-text">Prestamos</span>
+                            </a>
+                        </li>
+
+
+                        <hr class="featurette-divider">
+                        <div class="bottom-content">
+                            <li class="">
+                                <a href="#">
+                                    <i class='bx bx-log-out icon' @Click="logout()"></i>
+                                    <span class="text nav-text" @Click="logout()">Logout</span>
+                                </a>
+                            </li>
+
+                            <li class="mode">
+                                <div class="sun-moon">
+                                    <i class='bx bx-moon icon moon'></i>
+                                    <i class='bx bx-sun icon sun'></i>
+                                </div>
+                                <span class="mode-text text">Dark mode</span>
+
+                                <div class="toggle-switch">
+                                    <span class="switch"></span>
+                                </div>
+                            </li>
+
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="home">
+            <div class="text">
+                <h1>Manager</h1>
+            </div>
+            <div class="hamburgerMenu">
+                <div class="hamburger">
+                    <div class="_layer -top"></div>
+                    <div class="_layer -mid"></div>
+                    <div class="_layer -bottom"></div>
+                </div>
+                <nav class="menuppal">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:8080/web/accounts.html">
+
+                                <span class="text nav-text"> <i class='bx bx-wallet icon'></i>Tus Cuentas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/cards.html">
+
+                                <span class="text nav-text"><i class='bx bxs-credit-card icon'></i>Tus Tarjetas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/transfers.html">
+
+
+                                <span class="text nav-text"><i class='bx bx-transfer icon'></i>Transacciones</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:8080/web/loan-aplication.html">
+
+                                <span class="text nav-text"><i class="fa-solid fa-file-invoice-dollar icon"></i>Tus
+                                    Prestamos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                                <span class="text nav-text" @Click="logout()"><i class='bx bx-log-out icon'
+                                        @Click="logout()"></i>Logout</span>
+                            </a>
+                        </li>
+                        <li class="mode">
+
+
+
+                            <div class="toggle-switchH">
+                                <span class="mode-text1 text">Dark mode</span>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-content">
+                <main>
+
+                    <section class="forming-an-opinion">
+
+
+                        <form>
+                            <fieldset class="fontColor">
+
+                                <h3>Datos del Prestamo</h3>
+                                <legend>
+                                    <h2 class="titleManager">Crear Prestamo</h2>
+                                </legend>
+                                <label for="name">Nombre del prestamo</label>
+                                <input type="text" id="name" placeholder="Nombre del prestamo" required
+                                    v-model="nameLoan">
+                                <label for="maxAmount">Monto Maximo (min=10000)</label>
+                                <input type="text" id="maxAmount" placeholder="Monto maximo del prestamo" required
+                                    v-model="maxAmount">
+                                <label for="percentage">Porcentaje de interes</label>
+                                <input type="text" id="percentage" placeholder="Ej: 1. 35 == Seria 35%" required
+                                    v-model="percentage">
+
+                            </fieldset>
+                            <fieldset class="fontColor">
+                                <legend>Cuotas</legend>
+                                <label for="checkbox-container">Elija las cuotas del prestamo</label>
+                                <div class="checkbox-container">
+                                    <div class="checkbox checkboxManager">
+                                        <input type="checkbox" id="checkbox1" v-model="payments" value="3">
+                                        <label for="checkbox1">3</label>
+
+                                        <input type="checkbox" id="checkbox2" v-model="payments" value="4">
+                                        <label for="checkbox2"><span>4</span></label>
+
+                                        <input type="checkbox" id="checkbox3" v-model="payments" value="6">
+                                        <label for="checkbox3"><span>6</span></label>
+
+                                        <input type="checkbox" id="checkbox4" v-model="payments" value="8">
+                                        <label for="checkbox4"><span>8</span></label>
+
+                                        <input type="checkbox" id="checkbox5" v-model="payments" value="12">
+                                        <label for="checkbox5"><span>12</span></label>
+
+                                        <input type="checkbox" id="checkbox6" v-model="payments" value="18">
+                                        <label for="checkbox6"><span>18</span></label>
+
+                                        <input type="checkbox" id="checkbox7" v-model="payments" value="24">
+                                        <label for="checkbox7"><span>24</span></label>
+
+                                        <input type="checkbox" id="checkbox8" v-model="payments" value="36">
+                                        <label for="checkbox8"><span>36</span></label>
+
+                                        <input type="checkbox" id="checkbox9" v-model="payments" value="48">
+                                        <label for="checkbox9"><span>48</span></label>
+
+                                        <input type="checkbox" id="checkbox10" v-model="payments" value="60">
+                                        <label for="checkbox10"><span>60</span></label>
+                                    </div>
+                                </div>
+                                <button type="button" class="buttonCreateLoan" @Click="creatNewLoan()">Crear
+                                    Prestamo</button>
+                            </fieldset>
+                        </form>
+
+                    </section>
+
+
+                    <div class="clientManager ">
+                        <div class=" ">
+                            <form action="" class=" ">
+                                <fieldset>
+                                    <h2 class="titleManager">Client Manager</h2>
+                                    <div class="fontColor">
+                                        <label for="name" class="form-label">Nombre</label>
+                                        <input type="text" placeholder="Nombre" name="name" id="name"
+                                            v-model="inputName">
+                                    </div>
+                                    <div class="fontColor">
+                                        <label for="lastName" class="form-label">Apellido</label>
+                                        <input id="lastName" name="lastName" placeholder="Apellido" type="text"
+                                            v-model="inputLastName">
+                                    </div>
+                                    <div class="fontColor">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="text" placeholder="example@example.com" name="email" id="email"
+                                            v-model="inputEmail">
+                                    </div>
+                                    <button type="button" class="buttonCreateLoan"
+                                        @click="axiosLoadCLientfunction()">Agregar
+                                        Usuario</button>
+                                </fieldset>
+                            </form>
+
+
+                            <div class="recent-grid">
+                                <div class="projects">
+                                    <div class="card-transaccion">
+                                        <div class="card-header">
+                                            <h3 class="titleCard"> Lista de Clientes</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Nombre</td>
+                                                            <td>Apellido</td>
+                                                            <td>Email</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr v-for="cliente in clientes">
+                                                            <td>{{cliente.name}}</td>
+                                                            <td>{{cliente.lastName}}</td>
+                                                            <td>{{cliente.email}}</td>
+
+                                                            <td class="herocta">
+                                                                <button type="button" class="buttonSaveModal "
+                                                                    @click="modalClientes(cliente)">
+                                                                    <i class="fa-solid fa-gear icon">
+                                                                        <span>settings</span>
+                                                                    </i>
+                                                                </button>
+                                                            </td>
+                                                            <td><button type="button" class="buttondeleteModal"
+                                                                    @click="axiosDeleteFunction(cliente.id)">
+                                                                    <i class="fa-regular fa-trash-can icon">
+                                                                        <span>delete</span>
+                                                                    </i>
+                                                                </button>
+                                                            </td>
+                                                            <td>
+                                                                <a class="buttonSaveModal" href="../web/accounts.html"
+                                                                    role="button">Cuentas</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <h2>Clien REST response</h2>
+                                    <pre class="fontColor">
+                        {{dataApi}}
+                        
+                        
+                        </pre>
+
+                                </div>
+
+                            </div>
+                            <!-- Modal -->
+
+                            <section class="modal">
+                                <div class="modal__container">
+
+                                    <h2 class="modal__title">Modificar Cliente</h2>
+                                    <p class="modal__paragraph">{{idMuestra}}</p>
+                                    <div class="">
+                                        <div class="">
+                                            <label for="name" class="form-label modallabel">Nombre</label>
+                                            <p class="modallabelp">Original: <span>{{inputNameMuestra}}</span></p>
+                                            <input type="text" placeholder="Name" name="name" id="name"
+                                                v-model="inputNameModi">
+
+                                            <!-- <p>{{inputNameModi}}</p> -->
+                                        </div>
+                                        <div class="">
+                                            <label for="lastName" class="form-label modallabel">Apellido</label>
+                                            <p class="modallabelp">Original: <span>{{inputLastMuestra}}</span></p>
+                                            <input id="lastName" name="lastName" placeholder="Apellido" type="text"
+                                                v-model="inputLastNameModi">
+
+                                        </div>
+                                        <div class="">
+                                            <label for="email" class="form-label modallabel">Email</label>
+                                            <p class="modallabelp">Original: <span>{{inputEmailMuestra}}</span></p>
+                                            <input type="text" placeholder="example@example.com" name="email" id="email"
+                                                v-model="inputEmailModi">
+
+
+                                        </div>
+                                        <div class="modalfooter">
+
+                                            <button type="button" class="buttonSaveModal"
+                                                @click="axiosModifyUser(idMuestra)">Salvar
+                                                Cambios</button>
+                                            <a href="#" class="buttondeleteModal" @click="ocultar()">Cerrar Modal</a>
+                                        </div>
+
+                                    </div>
+                            </section>
+
+                </main>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./web/Assets/Js/manager.js"></script>
+</body>
+
+</html>
